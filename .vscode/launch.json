@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Test Script",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/3dmv/test.py",
+        "console": "integratedTerminal",
+        "args": [
+          "--gpu", "0",
+          "--scene_list", "${workspaceFolder}/3dmv/test_scenes.txt",
+          "--model_path", "${workspaceFolder}/pretrained_model/models/scannetv2/scannet5_model.pth",
+          "--data_path_2d", "${workspaceFolder}/dataset/scannet_frames_test",
+          "--data_path_3d", "${workspaceFolder}/dataset/scan_test",
+          "--num_nearest_images", "3",
+          "--model2d_orig_path", "${workspaceFolder}/pretrained_model/models/scannetv2/scannet5_model2d.pth"
+        ],
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}"
+        }
+      },
+      {
+        "name": "Python: Prepare 2D Data",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/prepare_data/prepare_2d_data.py",
+        "args": [
+            "--scannet_path",
+            "prepare_data/data/scann_test",
+            "--output_path",
+            "prepare_data/data/test_scenes/"
+        ],
+        "console": "integratedTerminal"
+    }
+    ]
+  }
+  

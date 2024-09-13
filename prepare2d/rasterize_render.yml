@@ -1,0 +1,34 @@
+scene_list: /home/hua/Desktop/ml3d/scannetpp/scannetpp_mini/splits/all_split.txt
+data_root: /media/hua/My Passport/deep_learning/datasets/scannet_plusplus/data/
+pth_data_dir: /media/hua/My Passport/deep_learning/datasets/scannet_plusplus/processed_data
+semantic_labels_path: /media/hua/My Passport/deep_learning/datasets/scannet_plusplus/metadata/semantic_benchmark/top100.txt
+dslr_subsample_factor: 100
+viz: false
+resize_width: 672
+resize_height: 448
+# scene_list: <path to nvs_sem_train.txt>
+# data_root: <path to scannetpp_download/data/>
+# pth_data_dir: <path to prepared pth files containing annotation>
+# semantic_labels_path: <path to corresponding semantic labels>
+# dslr_subsample_factor: 20
+# viz: false
+# folder where the data is downloaded
+data_root_render: /media/hua/My Passport/deep_learning/datasets/scannet_plusplus
+
+# Set True to render depth for iphone frames
+#render_iphone: False
+# Set True to render depth for dslr frames
+render_dslr: True
+
+#splits: [nvs_sem_train, nvs_sem_val]
+
+# Specify scene ids if you want to render depth for specific scenes
+# scene_ids: [355e5e32db]
+
+# The near and far planes for the depth camera during rendering in meters.
+near: 0.05
+far: 20.0
+
+# Output directory for the rendered depth images. If not given, the output will be saved to data folder in data_root
+output_dir: /media/hua/My Passport/deep_learning/datasets/scannet_plusplus/rasterize_render_data
+

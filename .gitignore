@@ -1,0 +1,8 @@
+/data/
+/dataset/
+/pretrained_model/
+/prepare_data/data/
+*.pyc
+*.png
+*.jpg
+# *.txt
